@@ -5,7 +5,7 @@ kernel: context [
 
     ||: :or
 
-    func: :func
+    fn: :func
 
     pipe: func [
         "Pipes a value through a succession of expressions as first (|>) argument"
@@ -34,6 +34,6 @@ kernel: context [
 
 .: make op! :kernel/pipe
 ..: make op! :kernel/range
-fn: :kernel/func
+fn: :kernel/fn
 &&: :kernel/&&
 ||: :kernel/||
