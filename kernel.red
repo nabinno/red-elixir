@@ -1,6 +1,8 @@
 Red []
 
 kernel: context [
+    func: :func
+
     pipe: func [
         "Pipes a value through a succession of expressions as first (|>) argument"
         seed            "Starting value"
@@ -28,3 +30,4 @@ kernel: context [
 
 .: make op! :kernel/pipe
 ..: make op! :kernel/range
+fn: :kernel/func
