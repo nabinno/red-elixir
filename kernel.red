@@ -1,6 +1,10 @@
 Red []
 
 kernel: context [
+    &&: :and
+
+    ||: :or
+
     func: :func
 
     pipe: func [
@@ -31,3 +35,5 @@ kernel: context [
 .: make op! :kernel/pipe
 ..: make op! :kernel/range
 fn: :kernel/func
+&&: :kernel/&&
+||: :kernel/||
