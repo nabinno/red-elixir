@@ -52,8 +52,8 @@ kernel: context [
     ..: make op! :range
 ]
 
-.: :kernel/pipe
-..: :kernel/range
+.: :kernel/.
+..: :kernel/..
 &: :kernel/&
 &&: :kernel/&&
 ||: :kernel/||
