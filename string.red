@@ -1,0 +1,47 @@
+Red []
+
+string: ctx [
+    .alter: :alter
+    .append: :append
+    .at: :at
+    .back: :back
+    .change: :change
+    .clear: :clear
+    .collect: :collect
+    .compose: :compose
+    .copy: :copy
+    .empty?: :empty?
+    .exclude: :exclude
+    .extract: :extract
+    .fifth: :fifth
+    .find: :find
+    .first: :first
+    .fourth: :fourth
+    .head: :head
+    .head?: :head?
+    .index?: :index?
+    .insert: :insert
+    .last: :last
+    .length?: :length?
+    .lowercase: :lowercase
+    .move: :move
+    .next: :next
+    .pad: :pad
+    .pick: :pick
+    .poke: :poke
+    .rejoin: :rejoin
+    .remove: :remove
+    .replace: :replace
+    .reverse: :reverse
+    .second: :second
+    .select: :select
+    .skip: :skip
+    .sort: :sort
+    .split: :split
+    .swap: :swap
+    .tail: :tail
+    .tail?: :tail?
+    .third: :third
+    .trim: :trim
+    .uppercase: :uppercase
+]
