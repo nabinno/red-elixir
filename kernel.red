@@ -1,21 +1,15 @@
 Red []
 
 kernel: context [
+    &: :does
+
     &&: :and
 
     ||: :or
 
-    def: func [
-        'name [word!]
-        spec [block!]
-        body [block!]
-    ][
-        do bind [set name func spec body] 'name
-    ]
-
     fn: :func
 
-    pipe: func [
+    pipe: fn [
         "Pipes a value through a succession of expressions as first (|>) argument"
         seed            "Starting value"
         blocks [block!] "Sequence of pipeable instructions"
@@ -36,7 +30,7 @@ kernel: context [
     ]
     .: make op! :pipe
 
-    range: func [min max][
+    range: fn [min max][
         collect [repeat i (max - min + 1) [keep (i + min - 1)]]
     ]
     ..: make op! :range
@@ -44,7 +38,7 @@ kernel: context [
 
 .: :kernel/pipe
 ..: :kernel/range
+&: :kernel/&
 &&: :kernel/&&
 ||: :kernel/||
-def: :kernel/def
 fn: :kernel/fn
