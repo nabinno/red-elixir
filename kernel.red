@@ -7,6 +7,8 @@ kernel: context [
 
     ||: :or
 
+    ctx: :context
+
     fn: :func
 
     pipe: fn [
@@ -41,4 +43,5 @@ kernel: context [
 &: :kernel/&
 &&: :kernel/&&
 ||: :kernel/||
+ctx: :kernel/ctx
 fn: :kernel/fn
