@@ -34,6 +34,7 @@ kernel: context [
         seed: append/only make paren! 1 seed
         foreach blk blocks [
             switch/default blk [
+                none [fn-status: 1 seed: append/only make paren! 3 head seed]
                 |> [fn-status: 1 seed: append/only make paren! 3 head seed]
             ][
                 switch fn-status [
