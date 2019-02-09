@@ -1,13 +1,13 @@
 Red []
 
 iteration: ctx [
-    .break: :break
-    .continue: :continue
-    .forall: :forall
-    .foreach: :foreach
-    .forever: :forever
-    .loop: :loop
-    .repeat: :repeat
-    .until: :until
-    .while: :while
+    _break: :break
+    _continue: :continue
+    _forall: :forall
+    _foreach: :foreach
+    _forever: :forever
+    _loop: :loop
+    _repeat: :repeat
+    _until: :until
+    _while: :while
 ]

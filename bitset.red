@@ -1,5 +1,5 @@
 Red []
 
 bitset: ctx [
-    .clear: :clear
+    _clear: :clear
 ]

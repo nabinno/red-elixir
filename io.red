@@ -1,15 +1,15 @@
 Red []
 
 io: ctx [
-    .ask: :ask
-    .input: :input
-    .last-lf?: :last-lf?
-    .load: :load
-    .new-line: :new-line
-    .new-line?: :new-line?
-    .prin: :prin
-    .print: :print
-    .probe: :probe
-    .read: :read
-    .write: :write
+    _ask: :ask
+    _input: :input
+    _last-lf?: :last-lf?
+    _load: :load
+    _new-line: :new-line
+    _new-line?: :new-line?
+    _prin: :prin
+    _print: :print
+    _probe: :probe
+    _read: :read
+    _write: :write
 ]

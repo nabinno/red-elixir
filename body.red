@@ -1,6 +1,6 @@
 Red []
 
 body: ctx [
-    .collect: :collect
-    .compose: :compose
+    _collect: :collect
+    _compose: :compose
 ]

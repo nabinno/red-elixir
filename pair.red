@@ -1,7 +1,7 @@
 Red []
 
 pair: ctx [
-    .at: :at
-    .first: :first
-    .last: :last
+    _at: :at
+    _first: :first
+    _last: :last
 ]

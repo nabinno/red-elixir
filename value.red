@@ -1,7 +1,7 @@
 Red []
 
 value: ctx [
-    .to-email: :to-email
-    .to-time: :to-time
-    .to-tag: :to-tag
+    _to-email: :to-email
+    _to-time: :to-time
+    _to-tag: :to-tag
 ]

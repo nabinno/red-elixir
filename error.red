@@ -1,10 +1,10 @@
 Red []
 
 error: ctx [
-    .attempt: :attempt
-    .catch: :catch
-    .cause-error: :cause-error
-    .error?: :error?
-    .throw: :throw
-    .try: :try
+    _attempt: :attempt
+    _catch: :catch
+    _cause-error: :cause-error
+    _error?: :error?
+    _throw: :throw
+    _try: :try
 ]

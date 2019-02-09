@@ -1,25 +1,25 @@
 Red []
 
 file: ctx [
-    .cd: :cd
-    .change-dir: :change-dir
-    .clean-path: :clean-path
-    .delete: :delete
-    .dir: :dir
-    .dir?: :dir?
-    .dirize: :dirize
-    .exists?: :exists?
-    .file?: :file?
-    .get-current-dir: :get-current-dir
-    .ll: :ll
-    .ls: :ls
-    .load: :load
-    .read: :read
-    .save: :save
-    .set-current-dir: :set-current-dir
-    .size?: :size?
-    .split-path: :split-path
-    .to-local-file: :to-local-file
-    .what-dir: :what-dir
-    .write: :write
+    _cd: :cd
+    _change-dir: :change-dir
+    _clean-path: :clean-path
+    _delete: :delete
+    _dir: :dir
+    _dir?: :dir?
+    _dirize: :dirize
+    _exists?: :exists?
+    _file?: :file?
+    _get-current-dir: :get-current-dir
+    _ll: :ll
+    _ls: :ls
+    _load: :load
+    _read: :read
+    _save: :save
+    _set-current-dir: :set-current-dir
+    _size?: :size?
+    _split-path: :split-path
+    _to-local-file: :to-local-file
+    _what-dir: :what-dir
+    _write: :write
 ]

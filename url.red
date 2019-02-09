@@ -1,9 +1,9 @@
 Red []
 
 url: ctx [
-    .path!: :path!
-    .path?: :path?
-    .read: :read
-    .url!: :url!
-    .url?: :url?
+    _path!: :path!
+    _path?: :path?
+    _read: :read
+    _url!: :url!
+    _url?: :url?
 ]

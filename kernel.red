@@ -1,19 +1,19 @@
 Red []
 
 kernel: context [
-    .call: :call
-    .comment: :comment
-    .extract-boot-args: :extract-boot-args
-    .flip-exe-flag: :flip-exe-flag
-    .get-env: :get-env
-    .halt: :halt
-    .quit-return: :quit-return
-    .quit: :quit
-    .set-env: :set-env
-    .source: :source
-    .stats: :stats
-    .wait: :wait
-    .what: :what
+    _call: :call
+    _comment: :comment
+    _extract-boot-args: :extract-boot-args
+    _flip-exe-flag: :flip-exe-flag
+    _get-env: :get-env
+    _halt: :halt
+    _quit-return: :quit-return
+    _quit: :quit
+    _set-env: :set-env
+    _source: :source
+    _stats: :stats
+    _wait: :wait
+    _what: :what
 
     &: :does
 

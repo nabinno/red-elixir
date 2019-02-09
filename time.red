@@ -1,7 +1,7 @@
 Red []
 
 time: ctx [
-    .first: :first
-    .last: :last
-    .now: :now
+    _first: :first
+    _last: :last
+    _now: :now
 ]

@@ -1,9 +1,9 @@
 Red []
 
 word: ctx [
-    .get: :get
-    .quote: :quote
-    .set: :set
-    .unset: :unset
-    .unset?: :unset?
+    _get: :get
+    _quote: :quote
+    _set: :set
+    _unset: :unset
+    _unset?: :unset?
 ]
