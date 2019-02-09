@@ -5,6 +5,14 @@ kernel: context [
 
     ||: :or
 
+    def: func [
+        'name [word!]
+        spec [block!]
+        body [block!]
+    ][
+        do bind [set name func spec body] 'name
+    ]
+
     fn: :func
 
     pipe: func [
@@ -26,14 +34,17 @@ kernel: context [
         ]
         do head seed
     ]
+    .: make op! :pipe
 
     range: func [min max][
         collect [repeat i (max - min + 1) [keep (i + min - 1)]]
     ]
+    ..: make op! :range
 ]
 
-.: make op! :kernel/pipe
-..: make op! :kernel/range
-fn: :kernel/fn
+.: :kernel/pipe
+..: :kernel/range
 &&: :kernel/&&
 ||: :kernel/||
+def: :kernel/def
+fn: :kernel/fn
