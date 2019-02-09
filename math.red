@@ -1,0 +1,46 @@
+Red []
+
+math: ctx [
+    .*: :*
+    .**: :**
+    .+: :+
+    .-: :-
+    .a-an: :a-an
+    .absolute: :absolute
+    .acos: :acos
+    .add: :add
+    .arccosine: :arccosine
+    .arcsine: :arcsine
+    .arctangent: :arctangent
+    .arctangent2: :arctangent2
+    .asin: :asin
+    .atan: :atan
+    .atan2: :atan2
+    .cos: :cos
+    .cosine: :cosine
+    .divide: :divide
+    .even?: :even?
+    .exp: :exp
+    .log-10: :log-10
+    .log-2: :log-2
+    .log-e: :log-e
+    .math: :math
+    .max: :max
+    .min: :min
+    .modulo: :modulo
+    .multiply: :multiply
+    .NaN?: :NaN?
+    .negate: :negate
+    .odd?: :odd?
+    .pi: :pi
+    .power: :power
+    .random: :random
+    .remainder: :remainder
+    .round: :round
+    .sin: :sin
+    .sine: :sine
+    .square-root: :square-root
+    .subtract: :subtract
+    .tan: :tan
+    .tangent: :tangent
+]
