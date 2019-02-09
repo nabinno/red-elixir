@@ -7,6 +7,7 @@ do %math.red
 do %error.red
 
 do %string.red
+do %integer.red
 do %series.red
 do %bitset.red
 do %map.red
