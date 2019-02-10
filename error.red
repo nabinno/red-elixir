@@ -7,4 +7,8 @@ error: ctx [
     _error?: :error?
     _throw: :throw
     _try: :try
+
+    raise: fn [message][
+		do make error! message
+    ]
 ]
