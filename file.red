@@ -12,8 +12,9 @@ file: ctx [
     _file?: :file?
     _get-current-dir: :get-current-dir
     _ll: :ll
-    _ls: :ls
     _load: :load
+    _ls: :ls
+    _pwd: :pwd
     _read: :read
     _save: :save
     _set-current-dir: :set-current-dir
