@@ -3,26 +3,29 @@
 <img src=red-elixir.jpg width=400 /> <sup id="a1">[[1]](#f1)</sup>
 
 ## Installation
-To pull in submodule changes with make: `make red.get`
+Configure `init.red` file:
 
-```makefile
-define github
-    git submodule add --force --name r/$(2) -- https\://github.com/$(1)/$(2) r/$(2)
-    git submodule absorbgitdirs r/$(2)
-endef
+```red:init.red
+Red []
 
-.PHONY: red.get
-red.get:
-    $(call github,nabinno,red-elixir)
-    git submodule foreach git pull origin master
+REDMODULE-PATH: to-red-file rejoin [get-env either equal? system/platform 'Windows ["USERPROFILE"]["HOME"] %/.red/redmodule.red]
+unless exists? REDMODULE-PATH [write REDMODULE-PATH read https://raw.githubusercontent.com/nabinno/redmodule/master/redmodule.red]
+do REDMODULE-PATH
+
+redmodule/get [
+    red-elixir #(
+        name: "Red Elixir"
+        init: %init.red
+        git: https://github.com/nabinno/red-elixir
+    )
+] system/options/path
+do-redmodule [red-elixir]
 ```
 
 ## Getting Started
 Execute a script:
 
 ```red
->> do %r/red-elixir/init.red
-== make object! ...
 >> 1 .. 10 .[
        |> series/map i [i * 2]
        |> series/map i [i + 1]
