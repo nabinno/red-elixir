@@ -10,7 +10,7 @@ Red []
 
 REDMODULE-PATH: to-red-file rejoin [get-env either equal? system/platform 'Windows ["USERPROFILE"]["HOME"] %/.red/redmodule.red]
 unless exists? REDMODULE-PATH [write REDMODULE-PATH read https://raw.githubusercontent.com/nabinno/redmodule/master/redmodule.red]
-do REDMODULE-PATH
+do/args REDMODULE-PATH system/options/path
 
 redmodule/get [
     red-elixir #(
@@ -18,7 +18,7 @@ redmodule/get [
         init: %init.red
         git: https://github.com/nabinno/red-elixir
     )
-] system/options/path
+]
 do-redmodule [red-elixir]
 ```
 
