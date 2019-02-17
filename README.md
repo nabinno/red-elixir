@@ -11,11 +11,7 @@ Red []
 
 hots: context [
     mods: [
-        do-mods #(init: %mods.red git: https://github.com/nabinno/mods)
         red-elixir #(init: %init.red git: https://github.com/nabinno/red-elixir)
-        json #(init: %json.red git: https://github.com/rebolek/red-tools)
-        http-tools #(init: %http-tools.red git: https://github.com/rebolek/red-tools)
-        regex #(init: %regex.red git: https://github.com/toomasv/regex)
     ]
 ]
 
@@ -26,8 +22,7 @@ hots: context [
 Execute a script:
 
 ```red
->> do %mods/github.com/nabinno/mods/mods.red
->> do-mods [red-elixir]
+>> do/args %require [red-elixir]
 
 >> 1 .. 10 .[
        |> series/map i [i * 2]
