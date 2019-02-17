@@ -14,6 +14,7 @@ file: ctx [
     _ll: :ll
     _load: :load
     _ls: :ls
+    _make-dir: :make-dir
     _pwd: :pwd
     _read: :read
     _save: :save
@@ -23,4 +24,8 @@ file: ctx [
     _to-local-file: :to-local-file
     _what-dir: :what-dir
     _write: :write
+
+    mkdir: :make-dir
+
+    mkdir-p: :make-dir/deep
 ]
