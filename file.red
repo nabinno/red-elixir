@@ -27,5 +27,7 @@ file: ctx [
 
     mkdir: :make-dir
 
-    mkdir-p: :make-dir/deep
+    mkdir-p: fn [dir-path [path!]][
+        mkdir/deep dir-path
+    ]
 ]
