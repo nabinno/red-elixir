@@ -3,29 +3,32 @@
 <img src=red-elixir.jpg width=400 /> <sup id="a1">[[1]](#f1)</sup>
 
 ## Installation
-Configure `init.red` file:
+Configure `hots.red` file:
 
-```red:init.red
+```sh
+> cat hots.red
 Red []
 
-REDMODULE-PATH: to-red-file rejoin [get-env either equal? system/platform 'Windows ["USERPROFILE"]["HOME"] %/.red/redmodule.red]
-unless exists? REDMODULE-PATH [write REDMODULE-PATH read https://raw.githubusercontent.com/nabinno/redmodule/master/redmodule.red]
-do/args REDMODULE-PATH system/options/path
-
-redmodule/get [
-    red-elixir #(
-        name: "Red Elixir"
-        init: %init.red
-        git: https://github.com/nabinno/red-elixir
-    )
+hots: context [
+    mods: [
+        do-mods #(init: %mods.red git: https://github.com/nabinno/mods)
+        red-elixir #(init: %init.red git: https://github.com/nabinno/red-elixir)
+        json #(init: %json.red git: https://github.com/rebolek/red-tools)
+        http-tools #(init: %http-tools.red git: https://github.com/rebolek/red-tools)
+        regex #(init: %regex.red git: https://github.com/toomasv/regex)
+    ]
 ]
-do-redmodule [red-elixir]
+
+> hot mods/get
 ```
 
 ## Getting Started
 Execute a script:
 
 ```red
+>> do %mods/github.com/nabinno/mods/mods.red
+>> do-mods [red-elixir]
+
 >> 1 .. 10 .[
        |> series/map i [i * 2]
        |> series/map i [i + 1]
