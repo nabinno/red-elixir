@@ -20,4 +20,5 @@ do %enum.red
 do %sets.red
 do %iteration.red
 do %error.red
+do %logger.red
 do %math.red
