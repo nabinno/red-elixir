@@ -46,6 +46,10 @@ series: ctx [
     _union: :union
     _unique: :unique
 
+    compact: fn [series][
+        collect [foreach series s [if s [keep s]]]
+    ]
+
     each: fn [series 'word body][
         forall series [
             set word series/1
@@ -54,11 +58,11 @@ series: ctx [
         none
     ]
 
-    map: fn [series 'word body][
+    map: fn [series 'word body /compact][
         forall series [
             set word series/1
             series/1: do bind body word
         ]
-        series
+        either compact [compact series][series]
     ]
 ]
