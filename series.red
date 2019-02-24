@@ -46,6 +46,10 @@ series: ctx [
     _union: :union
     _unique: :unique
 
+    at: fn [series index][
+        pick series index
+    ]
+
     compact: fn [series][
         collect [foreach series s [if s [keep s]]]
     ]
