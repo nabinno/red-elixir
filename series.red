@@ -62,11 +62,19 @@ series: ctx [
         none
     ]
 
-    map: fn [series 'word body /compact][
+    map: fn [series 'word body][
         forall series [
             set word series/1
             series/1: do bind body word
         ]
-        either compact [compact series][series]
+        series
+    ]
+
+    map-compact: fn [series 'word body][
+        forall series [
+            set word series/1
+            series/1: do bind body word
+        ]
+        compact series
     ]
 ]
