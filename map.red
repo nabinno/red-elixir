@@ -14,5 +14,13 @@ map: ctx [
 
     keys: :keys-of
 
+    to-query-string: fn [map [map!]][
+        map .[
+            |> map/keys
+            |> series/map key [rejoin [key "=" select map key "&"]]
+            |> string/_rejoin
+        ]
+    ]
+
     values: :values-of
 ]
