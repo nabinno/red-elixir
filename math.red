@@ -1,6 +1,6 @@
 Red []
 
-math: ctx [
+Math: ctx [
     _*: :*
     _**: :**
     _+: :+

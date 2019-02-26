@@ -1,6 +1,6 @@
 Red []
 
-kernel: context [
+Kernel: context [
     _call: :call
     _comment: :comment
     _extract-boot-args: :extract-boot-args

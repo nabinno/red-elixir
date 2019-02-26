@@ -1,6 +1,6 @@
 Red []
 
-string: ctx [
+String: ctx [
     _alter: :alter
     _append: :append
     _at: :at

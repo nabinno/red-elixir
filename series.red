@@ -1,6 +1,6 @@
 Red []
 
-series: ctx [
+Series: ctx [
     _alter: :alter
     _append: :append
     _at: :at

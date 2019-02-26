@@ -1,5 +1,5 @@
 Red []
 
-integer: ctx [
+Integer: ctx [
     _to-string: :to-string
 ]

@@ -1,6 +1,6 @@
 Red []
 
-error: ctx [
+Error: ctx [
     _attempt: :attempt
     _catch: :catch
     _cause-error: :cause-error

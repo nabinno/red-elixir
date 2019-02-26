@@ -1,6 +1,6 @@
 Red []
 
-keyword: ctx [
+Keyword: ctx [
     ; @param {series.<key value>} keywords
     get: fn [keywords [series!] 'key [word!]][
         select keywords key
@@ -34,11 +34,11 @@ keyword: ctx [
 
     ; @param {series.<key: value>} keywords
     to-query-string: fn [keywords [series!]][
-        map: keyword/to-map keywords
+        map: Keyword/to-map keywords
         map .[
-            |> map/keys
-            |> series/map key [rejoin [key "=" select map key "&"]]
-            |> string/_rejoin
+            |> Map/keys
+            |> Series/map key [rejoin [key "=" select map key "&"]]
+            |> String/_rejoin
         ]
     ]
 ]

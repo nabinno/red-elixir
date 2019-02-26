@@ -1,6 +1,6 @@
 Red []
 
-word: ctx [
+Word: ctx [
     _get: :get
     _quote: :quote
     _set: :set

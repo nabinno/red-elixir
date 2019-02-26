@@ -1,6 +1,6 @@
 Red []
 
-io: ctx [
+Io: ctx [
     _ask: :ask
     _input: :input
     _last-lf?: :last-lf?

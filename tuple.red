@@ -1,6 +1,6 @@
 Red []
 
-tuple: ctx [
+Tuple: ctx [
     _first: :first
     _last: :last
 ]

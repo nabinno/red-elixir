@@ -1,6 +1,6 @@
 Red []
 
-file: ctx [
+File: ctx [
     _cd: :cd
     _change-dir: :change-dir
     _clean-path: :clean-path

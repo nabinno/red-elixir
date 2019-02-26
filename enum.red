@@ -1,6 +1,6 @@
 Red []
 
-enum: ctx [
+Enum: ctx [
     all?: :all
 
     any?: :any

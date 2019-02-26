@@ -1,6 +1,6 @@
 Red []
 
-sets: ctx [
+Sets: ctx [
     _charset: :charset
     _difference: :difference
     _intersect: :intersect
