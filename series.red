@@ -73,4 +73,8 @@ Series: ctx [
         ]
         compact series
     ]
+
+    to-string: fn [series [series!]][
+        form series
+    ]
 ]
