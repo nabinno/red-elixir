@@ -15,13 +15,16 @@ Kernel: context [
     _wait: :wait
     _what: :what
 
-    &: :does
-
     &&: :and
 
     ||: :or
 
     ctx: :context
+
+    does-function: func ['word body][
+        set word function [] body
+    ]
+    &: make op! :does-function
 
     fn: :function
 
