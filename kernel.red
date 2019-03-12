@@ -53,10 +53,10 @@ Kernel: context [
     ..: make op! :range
 ]
 
-.: :kernel/.
-..: :kernel/..
-&: :kernel/&
-&&: :kernel/&&
-||: :kernel/||
-ctx: :kernel/ctx
-fn: :kernel/fn
+.: :Kernel/.
+..: :Kernel/..
+&: :Kernel/&
+&&: :Kernel/&&
+||: :Kernel/||
+ctx: :Kernel/ctx
+fn: :Kernel/fn
