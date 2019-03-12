@@ -23,7 +23,7 @@ Kernel: context [
 
     ctx: :context
 
-    fn: :func
+    fn: :function
 
     pipe: fn [
         "Pipes a value through a succession of expressions as first (|>) argument"
