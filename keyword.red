@@ -42,3 +42,5 @@ Keyword: ctx [
         ]
     ]
 ]
+
+~m: :Keyword/to-map
