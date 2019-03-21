@@ -3,7 +3,6 @@ Red []
 Series: ctx [
     _alter: :alter
     _append: :append
-    _at: :at
     _back: :back
     _change: :change
     _clear: :clear
