@@ -1,6 +1,8 @@
 Red []
 
 Map: ctx [
+    TMP: none
+
     _clear: :clear
     _extend: :extend
     _keys-of: :keys-of
@@ -14,10 +16,11 @@ Map: ctx [
 
     keys: :keys-of
 
-    to-query-string: fn [map [map!]][
-        map .[
+    to-query-string: fn [m [map!]][
+        set 'TMP m
+        Map/TMP .[
             |> Map/keys
-            |> Series/map key [rejoin [key "=" select map key "&"]]
+            |> Series/map key [rejoin [key "=" select Map/TMP key "&"]]
             |> String/_rejoin
         ]
     ]
