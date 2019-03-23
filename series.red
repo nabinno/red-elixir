@@ -46,7 +46,7 @@ Series: ctx [
     _unique: :unique
 
     compact: fn [series][
-        collect [foreach series s [if s [keep s]]]
+        collect [foreach s series [if s [keep s]]]
     ]
 
     each: fn [series 'word body][
@@ -55,6 +55,11 @@ Series: ctx [
             do bind body word
         ]
         none
+    ]
+
+    flatten: fn [series][
+        blk: []
+        foreach s series [append blk s]
     ]
 
     map: fn [series 'word body][
