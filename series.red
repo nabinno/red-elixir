@@ -49,6 +49,10 @@ Series: ctx [
         collect [foreach s series [if s [keep s]]]
     ]
 
+    compose-deep: fn [series][
+        _compose/deep series
+    ]
+
     each: fn [series 'word body][
         forall series [
             set word series/1
@@ -82,3 +86,5 @@ Series: ctx [
         form series
     ]
 ]
+
+~c: :Series/compose-deep
