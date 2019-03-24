@@ -28,10 +28,11 @@ Kernel: context [
 
     fn: :function
 
-    pipe: fn [
+    pipe: func [
         "Pipes a value through a succession of expressions as first (|>) argument"
         seed            "Starting value"
         blocks [block!] "Sequence of pipeable instructions"
+        /local fn-status
     ][
         fn-status: 1
         seed: append/only make paren! 1 seed
@@ -50,7 +51,7 @@ Kernel: context [
     ]
     .: make op! :pipe
 
-    range: fn [min max][
+    range: func [min max][
         collect [repeat i (max - min + 1) [keep (i + min - 1)]]
     ]
     ..: make op! :range
