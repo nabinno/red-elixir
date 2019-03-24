@@ -13,7 +13,6 @@ Kernel: context [
     _source: :source
     _stats: :stats
     _wait: :wait
-    _what: :what
 
     &&: :and
 
