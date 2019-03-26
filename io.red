@@ -1,8 +1,6 @@
 Red []
 
-Io: ctx [
-    _ask: :ask
-    _input: :input
+Io: context [
     _last-lf?: :last-lf?
     _load: :load
     _new-line: :new-line

@@ -1,6 +1,6 @@
 Red []
 
-Error: ctx [
+Error: context [
     _attempt: :attempt
     _catch: :catch
     _cause-error: :cause-error
@@ -8,7 +8,7 @@ Error: ctx [
     _throw: :throw
     _try: :try
 
-    raise: fn [message][
+    raise: func [message][
 		do make error! message
     ]
 ]

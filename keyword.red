@@ -1,27 +1,27 @@
 Red []
 
-Keyword: ctx [
+Keyword: context [
     ; @param {series.<key value>} keywords
-    get: fn [keywords [series!] 'key [word!]][
+    _get: func [keywords [series!] 'key [word!]][
         select keywords key
     ]
 
     ; @param {series.<key value>} keywords
-    keys: fn [keywords [series!]][
+    keys: func [keywords [series!]][
 		collect [
             foreach [key _] keywords [keep key]
         ]
     ]
 
     ; @param {series.<key value>} keywords
-    values: fn [keywords [series!]][
+    values: func [keywords [series!]][
 		collect [
             foreach [_ value] keywords [keep value]
         ]
     ]
 
     ; @param {series.<key: value>} keywords
-    to-map: fn [keywords [series!]][
+    to-map: function [keywords [series!]][
         value: none
         parse keywords: copy keywords [
             some [
@@ -33,14 +33,12 @@ Keyword: ctx [
     ]
 
     ; @param {series.<key: value>} keywords
-    to-query-string: fn [keywords [series!]][
+    to-query-string: function [keywords [series!]][
         map: Keyword/to-map keywords
         map .[
             |> Map/keys
             |> Series/map key [rejoin [key "=" select map key "&"]]
-            |> String/_rejoin
+            |> rejoin
         ]
     ]
 ]
-
-~m: :Keyword/to-map

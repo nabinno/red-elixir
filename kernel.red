@@ -13,53 +13,32 @@ Kernel: context [
     _source: :source
     _stats: :stats
     _wait: :wait
-
-    &&: :and
-
-    ||: :or
-
-    ctx: :context
-
-    does-function: func ['word body][
-        set word function [] body
-    ]
-    &: make op! :does-function
-
-    fn: :function
-
-    pipe: func [
-        "Pipes a value through a succession of expressions as first (|>) argument"
-        seed            "Starting value"
-        blocks [block!] "Sequence of pipeable instructions"
-        /local fn-status
-    ][
-        fn-status: 1
-        seed: append/only make paren! 1 seed
-        foreach blk blocks [
-            switch/default blk [
-                none [fn-status: 1 seed: append/only make paren! 3 head seed]
-                |> [fn-status: 1 seed: append/only make paren! 3 head seed]
-            ][
-                switch fn-status [
-                    0 [append/only seed blk]
-                    1 [insert/only seed blk fn-status: 0]
-                ]
-            ]
-        ]
-        do head seed
-    ]
-    .: make op! :pipe
-
-    range: func [min max][
-        collect [repeat i (max - min + 1) [keep (i + min - 1)]]
-    ]
-    ..: make op! :range
 ]
 
-.: :Kernel/.
-..: :Kernel/..
-&: :Kernel/&
-&&: :Kernel/&&
-||: :Kernel/||
-ctx: :Kernel/ctx
-fn: :Kernel/fn
+;-- pipe
+.: make op! func [
+    "Pipes a value through a succession of expressions as first (|>) argument"
+    seed            "Starting value"
+    blocks [block!] "Sequence of pipeable instructions"
+    /local fn-status
+][
+    fn-status: 1
+    seed: append/only make paren! 1 seed
+    foreach blk blocks [
+        switch/default blk [
+            none [fn-status: 1 seed: append/only make paren! 3 head seed]
+            |> [fn-status: 1 seed: append/only make paren! 3 head seed]
+        ][
+            switch fn-status [
+                0 [append/only seed blk]
+                1 [insert/only seed blk fn-status: 0]
+            ]
+        ]
+    ]
+    do head seed
+]
+
+;-- range
+..: make op! func [min max][
+    collect [repeat i (max - min + 1) [keep (i + min - 1)]]
+]

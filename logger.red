@@ -1,8 +1,8 @@
 Red []
 
-Logger: ctx [
-	info: fn [message][
+Logger: context [
+	info: function [message][
         logfile: []
-		append logfile reduce [Date/_now message]
+		append logfile reduce [now message]
 	]
 ]

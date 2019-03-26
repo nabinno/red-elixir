@@ -1,6 +1,6 @@
 Red []
 
-Map: ctx [
+Map: context [
     TMP: none
 
     _clear: :clear
@@ -10,20 +10,24 @@ Map: ctx [
     _select: :select
     _values-of: :values-of
 
-    get: fn [map [map!] 'key [word!]][
+    _get: func [map [map!] 'key [word!]][
         select map key
     ]
 
-    keys: :keys-of
+    keys: func [m [map!]][
+        keys-of m
+    ]
 
-    to-query-string: fn [m [map!]][
+    to-query-string: func [m [map!]][
         set 'TMP m
         Map/TMP .[
             |> Map/keys
-            |> Series/map key [rejoin [key "=" select Map/TMP key "&"]]
-            |> String/_rejoin
+            |> Series/map 'key [rejoin [key "=" select Map/TMP key "&"]]
+            |> rejoin
         ]
     ]
 
-    values: :values-of
+    values: func [m [map!]][
+        values-of m
+    ]
 ]

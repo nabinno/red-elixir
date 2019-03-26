@@ -1,11 +1,10 @@
 Red []
 
-Math: ctx [
+Math: context [
     _*: :*
     _**: :**
     _+: :+
     _-: :-
-    _a-an: :a-an
     _absolute: :absolute
     _acos: :acos
     _add: :add

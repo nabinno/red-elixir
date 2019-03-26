@@ -1,5 +1,7 @@
 Red []
 
-Integer: ctx [
-    _to-string: :to-string
+Integer: context [
+    _to-string: func [arg][
+        to-string arg
+    ]
 ]

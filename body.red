@@ -1,6 +1,6 @@
 Red []
 
-Body: ctx [
+Body: context [
     _collect: :collect
     _compose: :compose
 ]

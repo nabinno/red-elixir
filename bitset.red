@@ -1,5 +1,5 @@
 Red []
 
-Bitset: ctx [
+Bitset: context [
     _clear: :clear
 ]

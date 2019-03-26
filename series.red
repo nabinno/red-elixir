@@ -1,6 +1,6 @@
 Red []
 
-Series: ctx [
+Series: context [
     _alter: :alter
     _append: :append
     _back: :back
@@ -45,15 +45,15 @@ Series: ctx [
     _union: :union
     _unique: :unique
 
-    compact: fn [series][
+    compact: func [series][
         collect [foreach s series [if s [keep s]]]
     ]
 
-    compose-deep: fn [series][
-        _compose/deep series
+    compose-deep: func [series][
+        compose/deep series
     ]
 
-    each: fn [series 'word body][
+    each: func [series word body][
         forall series [
             set word series/1
             do bind body word
@@ -61,12 +61,12 @@ Series: ctx [
         none
     ]
 
-    flatten: fn [series][
+    flatten: func [series][
         blk: []
         foreach s series [append blk s]
     ]
 
-    map: fn [series 'word body][
+    map: func [series word body][
         forall series [
             set word series/1
             series/1: do bind body word
@@ -74,7 +74,7 @@ Series: ctx [
         series
     ]
 
-    map-compact: fn [series 'word body][
+    map-compact: func [series word body][
         forall series [
             set word series/1
             series/1: do bind body word
@@ -82,9 +82,7 @@ Series: ctx [
         compact series
     ]
 
-    to-string: fn [series [series!]][
+    to-string: func [series [series!]][
         form series
     ]
 ]
-
-~c: :Series/compose-deep

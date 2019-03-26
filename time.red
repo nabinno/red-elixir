@@ -1,7 +1,8 @@
 Red []
 
-Time: ctx [
+Time: context [
     _first: :first
     _last: :last
-    _now: :now
+
+    _now: does [now]
 ]

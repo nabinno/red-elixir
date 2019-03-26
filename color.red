@@ -1,6 +1,6 @@
 Red []
 
-Color: ctx [
+Color: context [
     _aqua: :aqua
     _beige: :beige
     _black: :black
